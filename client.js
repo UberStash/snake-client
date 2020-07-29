@@ -5,6 +5,11 @@ const connect = function() {
     host: 'localhost',
     port: 50541
   });
+
+  conn.on('connect', () => {
+    console.log('Connected to the game server PLAY PLAY PLAY AWAY!');
+    conn.write('Name: CMM');
+  });
   
   conn.on('data', (data) => {
     console.log('Server says: ', data);
