@@ -9,7 +9,17 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('Connected to the game server PLAY PLAY PLAY AWAY!');
     conn.write('Name: CMM');
-  });
+      
+//     for (let i = 0; i > 0; i++) {
+//       let time = 50;
+//      setTimeout( () => {
+//       conn.write("Move: up");
+//     },time);
+    
+//     time += 50;
+// }
+
+});
   
   conn.on('data', (data) => {
     console.log('Server says: ', data);
